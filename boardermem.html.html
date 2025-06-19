@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Search</title>
+    <marquee behavior="round" direction="left"
+  style="color: rgb(33, 33, 95);"><img src="anum.jpg" alt=""
+  width="25"> WELCOME TO ANUM PRESTBYTERIAN TECHNICAL INSTITUTE <img src="anum.jpg" alt=""
+  width="25"></marquee>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+
+    .search-container {
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #ffffff21;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" onkeyup="searchStudents()" class="search-box" placeholder="Search for student names...">
+  </div>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Class</th>
+        <th>Residence</th>
+        <th>View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Caleb Amuzu</td>
+        <td>Computer Hardware</td>
+        <td>CH 2</td>
+        <td>Boarder</td>
+        <td>View</td>
+      </tr>
+      <tr>
+        <td>Blankson Kelvin</td>
+        <td>Electrical Engineering</td>
+        <td>EE 2</td>
+        <td>Boarder</td>
+        <td><a href="k.html">View</a></td>
+      <tr>
+        <td>Samuel Dwamena</td>
+        <td>Plumbing and Gas Fitting Technology</td>
+        <td>PGF 2</td>
+        <td>Boarder</td>
+        <td><a href="s.html">View</a></td>
+      <tr>
+        <tr>
+          <td>Patrick Yevugah</td>
+          <td>Electrical Engineering Technology</td>
+          <td>EE 2</td>
+          <td>Boarder</td>
+          <td><a href="p.html">view</a></td>
+        <tr>
+          <td>Martin Adinkra</td>
+          <td>Building And Construction Technology</td>
+          <td>BC 2</td>
+          <td>Boarder</td>
+          <td><a href="isaac.html">View</a></td>
+        <tr>
+          <tr>
+            <td>Apuri George</td>
+            <td>Building And Construction Technology</td>
+            <td>BC 2</td>
+            <td>Boarder</td>
+            <td><a href="j.html">View</a></td>
+          <tr>
+            <td>Philip Oppong</td>
+            <td> Computer Hardware Technology</td>
+            <td>CH 2</td>
+            <td>Boarder</td>
+            <td><a href="ph.html">View</a></td>
+          <tr>
+            <tr>
+              <td>Bright Asamoah</td>
+              <td>Electrical Engineering Technology</td>
+              <td>EE 2</td>
+              <td>Boarder</td>
+              <td><a href="b.jpg.jpg">View</a></td>
+            <tr>
+              <tr>
+                <td>Seth Yeboah</td>
+                <td> Computer Hardware Technology</td>
+                <td>CH 2</td>
+                <td>Boarder</td>
+                <td><a href="ph.html">View</a></td>
+              <tr>
+                <td>Robert Nikorbam</td>
+                <td> Computer Hardware Technology</td>
+                <td>CH 2</td>
+                <td>Boarder</td>
+                <td><a href="robert.html">View</a></td>
+              <tr>
+                              <tr>
+                <td>Acheampong Obed</td>
+                <td> Computer Hardware Technology</td>
+                <td>CH 2</td>
+                <td>Day</td>
+                <td><a href="many.html">View</a></td>
+              <tr>
+
+                
+
+
+    </tbody>
+  </table>
+
+  <script>
+    function searchStudents() {
+      const input = document.getElementById("searchInput").value.toUpperCase();
+      const table = document.getElementById("studentTable");
+      const rows = table.getElementsByTagName("tr");
+
+      for (let i = 1; i < rows.length; i++) {
+        const td = rows[i].getElementsByTagName("td")[0]; // Search by name
+        if (td) {
+          const textValue = td.textContent || td.innerText;
+          rows[i].style.display = textValue.toUpperCase().includes(input) ? "" : "none";
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      padding: 8px;
+      background: #eaeaea;
+      margin-bottom: 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+</body>
+</html>
